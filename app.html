@@ -1,0 +1,43 @@
+<html manifest="app.appcache">
+<head> 
+    <title>Sachin IOT Control</title> 
+</head> 
+<body> 
+  
+<script language="JavaScript" type="text/javascript"> 
+  function ctrl_click(ip, state) {
+     var url = "http://192.168.0."+ip+"/relay/"+state;
+     console.log(url);
+
+     var xhr = new XMLHttpRequest();
+     xhr.onreadystatechange = function() {
+       if (xhr.readyState == XMLHttpRequest.DONE) {
+         alert(xhr.responseText);
+       }
+     }
+     xhr.open('GET', url, true);
+     xhr.send(null);
+}
+</script> 
+
+<style>
+.ctrl {
+  width: 100%;
+  height: 20%;
+  background: #58b3e8;
+  font-size: -webkit-xxx-large;
+  font-family: monospace;
+}
+</style>
+
+<h1>Switch 1</h1>
+<button class="ctrl" onclick="ctrl_click(31, 'on')">On</button>
+<button class="ctrl" onclick="ctrl_click(31, 'off')">Off</button>
+
+<hr>
+<h1>Switch 2</h1>
+<button class="ctrl" onclick="ctrl_click(41, 'on')">On</button>
+<button class="ctrl" onclick="ctrl_click(41, 'off')">Off</button>
+  
+</body>
+</html>
