@@ -22,9 +22,9 @@ var channelsLoaded = 0;
 // the 'T' Temperature left axis, or the 'O' Other right axis.
 var channelKeys =[];
 channelKeys.push({channelNumber:760155, name:'NameX',key:'8Z24AVCKKFLUV9CA',
-                fieldList:[{field:1,axis:'T'}]});
+                fieldList:[{field:1,axis:'O'}]});
 channelKeys.push({channelNumber:760155, name:'NameY',key:'8Z24AVCKKFLUV9CA',
-				fieldList:[{field:2,axis:'T'}]});
+				fieldList:[{field:2,axis:'O'}]});
     
 // user's timezone offset
 var myOffset = new Date().getTimezoneOffset();
@@ -267,12 +267,12 @@ $(document).ready(function()
 		},
 		yAxis: [{
             title: {
-                text: 'Temperature °F'
+                text: ' '
             },
-            id: 'T'
+            id: ' '
     }, {
             title: {
-                text: 'Other'
+                text: 'Status'
             },
             opposite: true,
             id: 'O'
