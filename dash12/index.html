@@ -22,9 +22,9 @@ var channelsLoaded = 0;
 // the 'T' Temperature left axis, or the 'O' Other right axis.
 var channelKeys =[];
 channelKeys.push({channelNumber:634536, name:'Sachin',key:'B7LFB9S4F5QL4S7H',
-                fieldList:[{field:5,axis:'O'}]});
+                fieldList:[{field:5,axis:'H'}]});
 channelKeys.push({channelNumber:608358, name:'Quinta de Galston',key:'XXXXXXXXXXXXXXXX',
-				fieldList:[{field:2,axis:'O'}]});
+				fieldList:[{field:2,axis:'H'}]});
     
 // user's timezone offset
 var myOffset = new Date().getTimezoneOffset();
@@ -267,15 +267,15 @@ $(document).ready(function()
 		},
 		yAxis: [{
             title: {
-                text: 'Temperature °F'
+                text: 'Y'
             },
-            id: 'T'
+            id: 'Y'
     }, {
             title: {
-                text: 'Other'
+                text: 'Humidity %'
             },
             opposite: true,
-            id: 'O'
+            id: 'H'
     }],
 		exporting: {
 		  enabled: true,
